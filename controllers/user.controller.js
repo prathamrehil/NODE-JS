@@ -1,10 +1,10 @@
-const connection=require("../db/config");
+const connection = require("../db/config");
 
 module.exports={
-    getAllUsers:(res,req)=>{
+    getAllUsers:(req,res)=>{
         connection.query("SELECT * FROM users",(err,results)=>{
             if(err){
-                res.status(500).send("Error retrieving users")
+                console.log(err);
             }else{
                 res.json(results);
             }

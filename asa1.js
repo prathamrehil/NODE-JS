@@ -44,7 +44,7 @@ const userRoutes=require("./routes/user.routes");
 app.use(express.json());
 const port = 3001;
 
-
+app.use("/users",userRoutes);
 
 
 app.listen(port, () => {
